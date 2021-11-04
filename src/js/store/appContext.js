@@ -1,48 +1,47 @@
-import React, { useState, useEffect } from "react";
-import getState from "./flux.js";
+import React, { useState, createContext } from "react";
+import PropTypes from "prop-types";
 
-// Don't change, here is where we initialize our context, by default it's just going to be null.
-export const Context = React.createContext(null);
+export const AppContext = createContext(undefined);
 
-// This function injects the global store to any view/component where you want to use it, we will inject the context to layout.js, you can see it here:
-// https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/src/js/layout.js#L35
-const injectContext = PassedComponent => {
-	const StoreWrapper = props => {
-		//this will be passed as the contenxt value
-		const [state, setState] = useState(
-			getState({
-				getStore: () => state.store,
-				getActions: () => state.actions,
-				setStore: updatedStore =>
-					setState({
-						store: Object.assign(state.store, updatedStore),
-						actions: { ...state.actions }
-					})
-			})
-		);
+const AppContextProvider = ({ children }) => {
+	const [store, setStore] = useState({
+		favorites: [],
+		pathurl: "https://www.swapi.tech/api/",
+		apiurl: "http://127.0.0.1:3000",
+		token: undefined
+	});
 
-		useEffect(() => {
-			/**
-			 * EDIT THIS!
-			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
-			 * you should do your ajax requests or fetch api requests here. Do not use setState() to save data in the
-			 * store, instead use actions, like this:
-			 *
-			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
-			 *
-			 **/
-		}, []);
+	const actions = {
+		
+		},
 
-		// The initial value for the context is not null anymore, but the current state of this component,
-		// the context will now have a getStore, getActions and setStore functions available, because they were declared
-		// on the state of this component
-		return (
-			<Context.Provider value={state}>
-				<PassedComponent {...props} />
-			</Context.Provider>
-		);
+		setToken: token => {
+			localStorage.setItem("token", token);
+			setStore(prev => ({
+				...prev,
+				token: token
+			}));
+		},
+		deleteToken: () => {
+			localStorage.removeItem("token");
+			setStore(prev => ({
+				...prev,
+				token: undefined
+			}));
+		},
+		prueba: () => {
+			console.log(store.favorites);
+		}
 	};
-	return StoreWrapper;
+
+	const context = { store, actions };
+
+	return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 };
 
-export default injectContext;
+AppContextProvider.propTypes = {
+	children: PropTypes.node
+};
+
+export default AppContextProvider;
+

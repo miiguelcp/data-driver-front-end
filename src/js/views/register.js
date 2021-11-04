@@ -15,10 +15,10 @@ export const Register = () => {
 
 	async function signup(event) {
 		let data = {
-			firstName: firstName,
-			lastName: lastName,
+			first_name: firstName,
+			last_name: lastName,
 			email: email,
-			phone: phone,
+			phone_number: phone,
 			password: password,
 			salt: "14dd1258saas78"
 		};
