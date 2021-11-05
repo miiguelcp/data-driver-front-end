@@ -5,16 +5,10 @@ export const AppContext = createContext(undefined);
 
 const AppContextProvider = ({ children }) => {
 	const [store, setStore] = useState({
-		favorites: [],
-		pathurl: "https://www.swapi.tech/api/",
-		apiurl: "http://127.0.0.1:3000",
 		token: undefined
 	});
 
 	const actions = {
-		
-		},
-
 		setToken: token => {
 			localStorage.setItem("token", token);
 			setStore(prev => ({
@@ -28,9 +22,6 @@ const AppContextProvider = ({ children }) => {
 				...prev,
 				token: undefined
 			}));
-		},
-		prueba: () => {
-			console.log(store.favorites);
 		}
 	};
 
@@ -44,4 +35,3 @@ AppContextProvider.propTypes = {
 };
 
 export default AppContextProvider;
-

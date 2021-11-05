@@ -29,7 +29,7 @@ export const Register = () => {
 		});
 		console.log(response);
 		if (response.ok) {
-			console.log("Todo bien");
+			history.push("/login");
 		} else alert(response.statusText);
 	}
 

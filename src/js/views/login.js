@@ -1,21 +1,29 @@
 import React, { useContext, useState } from "react";
+import { AppContext } from "../store/appContext";
+import { Link, useHistory } from "react-router-dom";
+
+const URL = "http://127.0.0.1:3500";
+
 export const Login = () => {
+	const { store, actions } = useContext(AppContext);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const history = useHistory();
 
 	async function login(event) {
 		let data = {
 			email: email,
 			password: password
 		};
-		const response = await fetch(URL + "/user", {
+		const response = await fetch(URL + "/login", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data)
 		});
-		console.log(response);
+		const body = await response.json();
 		if (response.ok) {
-			console.log("Todo bien");
+			actions.setToken(body.token);
+			history.push("/");
 		} else alert(response.statusText);
 	}
 
@@ -51,7 +59,7 @@ export const Login = () => {
 				/>
 			</div>
 
-			<button type="button" className="btn btn-primary">
+			<button onClick={login} type="button" className="btn btn-primary">
 				Submit
 			</button>
 		</form>
