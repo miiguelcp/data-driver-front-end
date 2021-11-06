@@ -1,3 +1,75 @@
 /* 
+
     General Styles
 */
+#header{
+    background-color: black;
+}
+#btn{
+    
+    border: 1px solid #73DE09;
+}
+
+#btn:hover{
+    background-color: #73DE09;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+}
+.img-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#btn-submit{
+    background-color: #73DE09;
+    color: white;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.container{
+   
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.9;
+    background-color: black;
+   
+
+}
+.texto-encima{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: black;
+    font-size: 60px;
+
+}
+.texto-encima2{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+

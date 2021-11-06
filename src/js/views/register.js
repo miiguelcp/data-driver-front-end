@@ -34,11 +34,23 @@ export const Register = () => {
 	}
 
 	return (
-		<form>
-			<div className="mb-3">
-				<div>
+		<form className="register">
+			<div className="img-logo">
+				<img
+					className="mb-3"
+					src="https://cdn-user-icons.flaticon.com/27436/27436137/1636156482965.svg?token=exp=1636157383~hmac=6b468a15e81b205e5197ea84397e03aa"
+					width="100px"
+					height="100px"
+				/>
+			</div>
+			<div>
+				<h2 style={{ textAlign: "center", marginBottom: "40px" }}>Create New Account </h2>
+			</div>
+			<div className="mb-2">
+				<div className="mb-3">
 					<label className="form-label">First Name</label>
 					<input
+						placeholder="Enter your first name"
 						type="text"
 						className="form-control"
 						onChange={event => {
@@ -47,24 +59,26 @@ export const Register = () => {
 						value={firstName}
 					/>
 				</div>
-				<div>
+				<div className="mb-2">
 					<label className="form-label">Last Name</label>
 					<input
+						placeholder="Enter your last name"
 						type="text"
-						className="form-control"
+						className="form-control fas fa-envelope"
 						onChange={event => {
 							setLastname(event.target.value);
 						}}
 						value={lastName}
 					/>
 				</div>
-				<div>
+				<div className="mb-2">
 					<label htmlFor="exampleInputEmail1" className="form-label">
 						Email address
 					</label>
 					<input
+						placeholder="Enter your e-mail"
 						type="email"
-						className="form-control"
+						className="form-control fas fa-envelope"
 						id="exampleInputEmail1"
 						aria-describedby="emailHelp"
 						onChange={event => {
@@ -73,13 +87,14 @@ export const Register = () => {
 						value={email}
 					/>
 				</div>
-				<div>
+				<div className="">
 					<label htmlFor="exampleInputEmail1" className="form-label">
 						Phone Number
 					</label>
 					<input
+						placeholder="Enter your phone number"
 						type="text"
-						className="form-control"
+						className="form-control fas fa-envelope"
 						id="exampleInputEmail1"
 						aria-describedby="emailHelp"
 						onChange={event => {
@@ -89,13 +104,14 @@ export const Register = () => {
 					/>
 				</div>
 			</div>
-			<div className="mb-3">
+			<div className="mb-2">
 				<label htmlFor="exampleInputPassword1" className="form-label">
 					Password
 				</label>
 				<input
+					placeholder="Enter your password"
 					type="password"
-					className="form-control"
+					className="form-control fas fa-envelope"
 					id="exampleInputPassword1"
 					onChange={event => {
 						setPassword(event.target.value);
@@ -104,7 +120,7 @@ export const Register = () => {
 				/>
 			</div>
 
-			<button type="button" className="btn btn-primary" onClick={signup}>
+			<button type="button" className="btn" id="btn-submit" onClick={signup}>
 				Submit
 			</button>
 		</form>
