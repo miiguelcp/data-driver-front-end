@@ -18,7 +18,7 @@ export const Home = () => (
 					<img
 						className="card-img-top text-center"
 						style={{ display: "block", margin: "auto", width: "80px" }}
-						src="https://cdn-user-icons.flaticon.com/27436/27436137/1636169508602.svg?token=exp=1636170410~hmac=89e4b8b46a931de5f7be926a792e55a7"
+						src={rigoImage}
 						alt="Card image cap"
 					/>
 
@@ -60,7 +60,7 @@ export const Home = () => (
 			</div>
 		</div>
 		<div className="container-fluid mt-3">
-			<div className="row">
+			<div className="row p-2">
 				<div className="col" style={{ paddingTop: "7%" }}>
 					<h3>Encabezado</h3>
 					<p className="card-text">
@@ -76,19 +76,19 @@ export const Home = () => (
 					<img
 						className="card-img-top"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "650px" }}
+						style={{ width: "675px" }}
 						alt="Card image cap"
 					/>
 				</div>
 			</div>
 		</div>
 		<div className="container-fluid mt-3">
-			<div className="row">
+			<div className="row p-2">
 				<div className="col">
 					<img
 						className="card-img-top"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "650px" }}
+						style={{ width: "675px" }}
 						alt="Card image cap"
 					/>
 				</div>
@@ -102,6 +102,29 @@ export const Home = () => (
 					<button type="button" className="btn mt-2" id="btn-submit">
 						Ver Más
 					</button>
+				</div>
+			</div>
+		</div>
+		<div className="container-fluid mt-3">
+			<div className="row p-2">
+				<div className="col" style={{ paddingTop: "7%" }}>
+					<h3>Encabezado</h3>
+					<p className="card-text">
+						Some quick example text to build on the card title and make up the bulk of the cards content.
+						Some quick example text to build on the card title and make up the bulk of the cards content.
+						Some quick example text to build on the card title and make up the bulk of the cards content.
+					</p>
+					<button type="button" className="btn mt-2" id="btn-submit">
+						Ver Más
+					</button>
+				</div>
+				<div className="col">
+					<img
+						className="card-img-top"
+						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
+						style={{ width: "675px" }}
+						alt="Card image cap"
+					/>
 				</div>
 			</div>
 		</div>
