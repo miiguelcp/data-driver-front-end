@@ -72,4 +72,16 @@
     font-weight: 500;
 }
 
+.card-img-top{
+    width: 100px;
+    height: 100px;
+}
 
+.travel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 15px;
+}

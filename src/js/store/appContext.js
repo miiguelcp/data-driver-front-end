@@ -5,7 +5,8 @@ export const AppContext = createContext(undefined);
 
 const AppContextProvider = ({ children }) => {
 	const [store, setStore] = useState({
-		token: undefined
+		token: undefined,
+		URL: "http://127.0.0.1:3500"
 	});
 
 	const actions = {

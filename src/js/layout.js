@@ -6,6 +6,9 @@ import { Home } from "./views/home";
 import { Register } from "./views/register";
 import { Login } from "./views/login";
 import { Single } from "./views/single";
+import { Perfil } from "./views/perfil";
+import { Travel } from "./views/travel";
+import { DetailsTravel } from "./views/details-travel";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -26,10 +29,12 @@ const Layout = () => {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
+							<Route exact path="/perfil" component={Perfil} />
+							<Route exact path="/travel" component={Travel} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />
-							<Route exact path="/single/:theid">
-								<Single />
+							<Route exact path="/details/:theid">
+								<DetailsTravel />
 							</Route>
 							<Route>
 								<h1>Not found!</h1>
