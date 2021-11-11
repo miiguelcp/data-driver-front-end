@@ -85,3 +85,17 @@
     margin: auto;
     margin-top: 15px;
 }
+.container-father-perfil{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+
+}
+#btn-editar:active{
+    background-color: #73DE09;
+    color: white;
+    
+}
+#btn.editar::selection{
+    border: 1px solid #73DE09;
+}
