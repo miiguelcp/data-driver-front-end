@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../store/appContext";
 import { Link, useHistory } from "react-router-dom";
-import rigoImage from "../../img/usuario.png";
+import Usuario from "../../img/usuario.png";
 
 const URL = "http://127.0.0.1:3500";
 
@@ -31,12 +31,7 @@ export const Login = () => {
 	return (
 		<form className="login">
 			<div className="img-logo">
-				<img
-					className="mb-3"
-					src="https://cdn-user-icons.flaticon.com/27436/27436137/1636156482965.svg?token=exp=1636157383~hmac=6b468a15e81b205e5197ea84397e03aa"
-					width="100px"
-					height="100px"
-				/>
+				<img className="mb-3" src={Usuario} width="100px" height="100px" />
 			</div>
 			<div>
 				<h2 style={{ textAlign: "center", marginBottom: "40px" }}>Login to the system</h2>

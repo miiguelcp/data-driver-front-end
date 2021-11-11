@@ -33,7 +33,7 @@ export const Home = () => (
 					<img
 						className="card-img-top text-center"
 						style={{ display: "block", margin: "auto", width: "80px" }}
-						src="https://cdn-user-icons.flaticon.com/27436/27436137/1636169508602.svg?token=exp=1636170410~hmac=89e4b8b46a931de5f7be926a792e55a7"
+						src={rigoImage}
 						alt="Card image cap"
 					/>
 					<div className="card-body text-center">
@@ -47,7 +47,7 @@ export const Home = () => (
 					<img
 						className="card-img-top text-center"
 						style={{ display: "block", margin: "auto", width: "80px" }}
-						src="https://cdn-user-icons.flaticon.com/27436/27436137/1636169508602.svg?token=exp=1636170410~hmac=89e4b8b46a931de5f7be926a792e55a7"
+						src={rigoImage}
 						alt="Card image cap"
 					/>
 					<div className="card-body text-center">
@@ -76,7 +76,7 @@ export const Home = () => (
 					<img
 						className="card-img-top"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "675px" }}
+						style={{ width: "675px", height: "400px" }}
 						alt="Card image cap"
 					/>
 				</div>
@@ -88,7 +88,7 @@ export const Home = () => (
 					<img
 						className="card-img-top"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "675px" }}
+						style={{ width: "675px", height: "400px" }}
 						alt="Card image cap"
 					/>
 				</div>
@@ -122,7 +122,7 @@ export const Home = () => (
 					<img
 						className="card-img-top"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "675px" }}
+						style={{ width: "675px", height: "400px" }}
 						alt="Card image cap"
 					/>
 				</div>
