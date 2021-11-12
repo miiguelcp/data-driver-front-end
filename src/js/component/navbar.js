@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { AppContext } from "../store/appContext";
+import Usuario from "../../img/usuario.png";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(AppContext);
@@ -20,34 +21,32 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{store.token ? (
 					<>
-						<button className="m-2 btn text-light" id="btn" onClick={logout}>
-							Log Out
-						</button>
-						<div className="dropdown">
+						<Link to="/travel" className="dropdown-item m-2 text-light	btn" id="btn">
+							Create Travel
+						</Link>
+						<div className="dropdown ">
 							<button
 								className="btn btn-secondary dropdown-toggle"
 								type="button"
 								id="dropdownMenuButton1"
 								data-bs-toggle="dropdown"
 								aria-expanded="false">
-								Dropdown button
+								<img src={Usuario} width="25px" height="25px" />
 							</button>
-							<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+							<ul
+								className="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"
+								style={{ backgroundColor: "#000000" }}
+								aria-labelledby="dropdownMenuButton1">
+								<Link to="/perfil" className="dropdown-item m-2 text-light	btn" id="btn">
+									Perfil
+								</Link>
 								<li>
-									<a className="dropdown-item" href="#">
-										Action
-									</a>
+									<hr className="dropdown-divider bg-light" />
 								</li>
-								<li>
-									<a className="dropdown-item" href="#">
-										Another action
-									</a>
-								</li>
-								<li>
-									<a className="dropdown-item" href="#">
-										Something else here
-									</a>
-								</li>
+								<button className="dropdown-item m-2 btn text-light" id="btn" onClick={logout}>
+									Log Out
+								</button>
 							</ul>
 						</div>
 					</>

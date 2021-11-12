@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import PropTypes from "prop-types";
 
 export const AppContext = createContext(undefined);
@@ -27,7 +27,15 @@ const AppContextProvider = ({ children }) => {
 	};
 
 	const context = { store, actions };
-
+	useEffect(() => {
+		const token = localStorage.getItem("token");
+		if (token) {
+			setStore(prev => ({
+				...prev,
+				token: token
+			}));
+		}
+	}, []);
 	return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 };
 
