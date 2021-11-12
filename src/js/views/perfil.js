@@ -9,7 +9,7 @@ export const Perfil = () => {
 	const [lastName, setLastname] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
-	const [prueba, setPrueba] = useState("");
+	const [prueba, setPrueba] = useState([]);
 	const { store, actions } = useContext(AppContext);
 
 	const history = useHistory();
@@ -28,23 +28,25 @@ export const Perfil = () => {
 			body: JSON.stringify(data)
 		});
 
-		const getInfo = async () => {
-			try {
-				const response = await fetch(store.URL + "/user");
-				const body = await response.json();
-				console.log(body);
-				setPrueba(body);
-			} catch (error) {
-				alert("Sucedió algo inesperado");
-			}
-		};
 		const responsePrueba = await fetch(store.URL + "/user");
 		const body = await response.json();
 		console.log(body);
-		useEffect(() => {
-			getInfo();
-		}, []);
 	}
+	const getInfo = async () => {
+		try {
+			const response = await fetch(store.URL + "/user");
+			const body = await response.json();
+			console.log(body);
+
+			setPrueba(body[0]);
+		} catch (error) {
+			alert("Sucedió algo inesperado");
+		}
+	};
+
+	useEffect(() => {
+		getInfo();
+	}, []);
 
 	return (
 		<div className="row m-5">
@@ -53,7 +55,10 @@ export const Perfil = () => {
 					<img src={Usuario} className="card-img-top ml-3" alt="..." />
 					<div className="card-body">
 						<div className="container-father-perfil">
-							<p className="card-text text-centrado">First Name</p>
+							<p className="card-text text-centrado">
+								First Name{prueba.first_name}
+								{prueba.firstName}
+							</p>
 							<button className="btn" id="btn-editar">
 								<i className="fas fa-pencil-alt"></i>
 							</button>
