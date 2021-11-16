@@ -24,7 +24,7 @@ export const Navbar = () => {
 						<div className="row">
 							<div className="col">
 								<Link to="/travel" className="dropdown-item pt-1 pb-1 text-light btn" id="btn-travel">
-									<i className="fas fa-route icono-travel"></i>
+									<i className="fas fa-route icono-travel" />
 									<span> Create Travel</span>
 								</Link>
 							</div>

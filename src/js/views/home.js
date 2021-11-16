@@ -15,7 +15,7 @@ export const Home = () => (
 		<div className="container-fluid mt-3">
 			<div className="row section-icon">
 				<div className="card text-center" style={{ width: "28.5rem", border: "none" }}>
-					<i className="fas fa-calculator icono"></i>
+					<i className="fas fa-calculator icono" />
 
 					<div className="card-body text-center">
 						<p className="card-text">
@@ -25,7 +25,7 @@ export const Home = () => (
 					</div>
 				</div>
 				<div className="card text-center" style={{ width: "28.5rem", border: "none" }}>
-					<i className="fas fa-route icono"></i>
+					<i className="fas fa-route icono" />
 					<div className="card-body text-center">
 						<p className="card-text">
 							Puedes visualizar, gestionar, y crear viajes. Llevando un orden de tus destinos en todo
@@ -34,7 +34,7 @@ export const Home = () => (
 					</div>
 				</div>
 				<div className="card text-center" style={{ width: "28.5rem", border: "none" }}>
-					<i className="fas fa-file-invoice-dollar icono"></i>
+					<i className="fas fa-file-invoice-dollar icono" />
 					<div className="card-body text-center">
 						<p className="card-text">
 							Contarás con una validez legal de cada servicio laborado mediante facturas que se generarán

@@ -12,20 +12,29 @@ export const Travel = () => {
 	const [toll, setToll] = useState(0);
 	const [unexpected, setUnexpected] = useState(0);
 
+	const history = useHistory();
+
 	async function travel(event) {
 		let data = {
-			amount: amount,
+			initial_amount: amount,
 			lodging: lodging,
 			food: food,
 			fuel: fuel,
 			toll: toll,
 			unexpected: unexpected
 		};
-		const response = await fetch(store.URL + "/travel", {
+		const response = await fetch(store.URL + "/travels", {
 			method: "POST",
-			headers: { "Content-Type": "application/json" },
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: `Bearer ${store.token}`
+			},
 			body: JSON.stringify(data)
 		});
+		console.log(response);
+		if (response.ok) {
+			history.push("/perfil");
+		} else alert(response.statusText);
 	}
 
 	return (
@@ -116,7 +125,7 @@ export const Travel = () => {
 				/>
 			</div>
 
-			<button type="submit" className="btn" id="btn-submit" onClick={travel}>
+			<button type="button" className="btn" id="btn-submit" onClick={travel}>
 				Submit
 			</button>
 		</form>
