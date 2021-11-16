@@ -29,7 +29,7 @@ export const Login = () => {
 	}
 
 	return (
-		<form className="login">
+		<form className="login" style={{ marginTop: "75px", marginBottom: "75px" }}>
 			<div className="img-logo">
 				<img className="mb-3" src={Usuario} width="100px" height="100px" />
 			</div>

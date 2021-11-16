@@ -47,17 +47,14 @@ export const Perfil = () => {
 		}
 	};
 
-	useEffect(
-		() => {
-			if (store.token) getInfo();
-		},
-		[store.token]
-	);
+	useEffect(() => {
+		if (store.token) getInfo();
+	}, [store.token]);
 
 	return (
 		<>
 			{store.token ? (
-				<div className="row m-5">
+				<div className="row " style={{ margin: "95px 50px 160px 50px" }}>
 					<div className="col-4">
 						<div className="card">
 							<img src={Usuario} className="card-img-top ml-3" alt="..." />

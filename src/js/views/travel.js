@@ -29,7 +29,7 @@ export const Travel = () => {
 	}
 
 	return (
-		<form className="travel">
+		<form className="travel" style={{ marginTop: "50px", marginBottom: "50px" }}>
 			<h2>Travel Information</h2>
 			<div className="mb-3">
 				<label htmlFor="exampleInputEmail1" className="form-label">

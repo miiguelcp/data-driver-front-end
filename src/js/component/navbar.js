@@ -21,33 +21,48 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{store.token ? (
 					<>
-						<Link to="/travel" className="dropdown-item m-2 text-light	btn" id="btn">
-							Create Travel
-						</Link>
-						<div className="dropdown ">
-							<button
-								className="btn btn-secondary dropdown-toggle"
-								type="button"
-								id="dropdownMenuButton1"
-								data-bs-toggle="dropdown"
-								aria-expanded="false">
-								<img src={Usuario} width="25px" height="25px" />
-							</button>
-
-							<ul
-								className="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"
-								style={{ backgroundColor: "#000000" }}
-								aria-labelledby="dropdownMenuButton1">
-								<Link to="/perfil" className="dropdown-item m-2 text-light	btn" id="btn">
-									Perfil
+						<div className="row">
+							<div className="col">
+								<Link to="/travel" className="dropdown-item pt-1 pb-1 text-light btn" id="btn-travel">
+									<i className="fas fa-route icono-travel"></i>
+									<span> Create Travel</span>
 								</Link>
-								<li>
-									<hr className="dropdown-divider bg-light" />
-								</li>
-								<button className="dropdown-item m-2 btn text-light" id="btn" onClick={logout}>
-									Log Out
-								</button>
-							</ul>
+							</div>
+							<div className="col">
+								<div className="dropdown">
+									<button
+										className="btn btn-secondary dropdown-toggle"
+										type="button"
+										id="dropdownMenuButton1"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+										style={{
+											marginRight: "20px",
+											backgroundColor: "#000000",
+											border: "1px solid #73DE09"
+										}}>
+										<img src={Usuario} width="25px" height="25px" />
+									</button>
+
+									<ul
+										className="dropdown-menu  dropdown-menu-lg-start"
+										style={{ backgroundColor: "#000000" }}
+										aria-labelledby="dropdownMenuButton1">
+										<Link to="/perfil" className="dropdown-item  text-light	btn" id="btn-inicio">
+											Perfil
+										</Link>
+										<li>
+											<hr className="dropdown-divider bg-light" />
+										</li>
+										<button
+											className="dropdown-item pt-1 pb-2 mb-1 btn text-light"
+											id="btn-inicio"
+											onClick={logout}>
+											Log Out
+										</button>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</>
 				) : (

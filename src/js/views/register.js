@@ -35,7 +35,7 @@ export const Register = () => {
 	}
 
 	return (
-		<form className="register">
+		<form className="register" style={{ marginTop: "75px", marginBottom: "75px" }}>
 			<div className="img-logo">
 				<img className="mb-3" src={Usuario} width="100px" height="100px" />
 			</div>

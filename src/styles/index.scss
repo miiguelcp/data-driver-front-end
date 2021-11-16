@@ -99,3 +99,40 @@
 #btn.editar::selection{
     border: 1px solid #73DE09;
 }
+.icono{
+    font-size: 70px;
+    color: #73DE09;
+}
+.icono-travel{
+    font-size: 28px;
+    color: #73DE09;
+}
+
+#btn-travel{
+    border: 1px solid #73DE09;
+    color: #73DE09;
+}
+#btn-travel:hover{
+    background: linear-gradient(to right,
+    white 5%, #73DE09 80%);
+
+}
+
+.section-icon{
+    margin-top: 60px;
+}
+.section-text-image{
+    margin-top: 60px;
+}
+.dropdown .dropdown-menu[data-bs-popper] {
+    top: 100%;
+    right: 0;
+    left: auto;
+    margin-top: 0.125rem;
+    margin-right: 0;
+    padding-bottom: 1px;
+}
+#btn-inicio:hover{
+    background-color:#73DE09;
+    
+}
