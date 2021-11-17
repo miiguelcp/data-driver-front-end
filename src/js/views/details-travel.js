@@ -10,7 +10,7 @@ export const DetailsTravel = props => {
 
 	const getDetails = async id => {
 		try {
-			const response = await fetch(`${store.URL}/details/${travel_id} `, {
+			const response = await fetch(`${store.URL}/details/${params.travel_id} `, {
 				headers: { Authorization: `Bearer ${store.token}` }
 			});
 			const body = await response.json();
@@ -28,12 +28,9 @@ export const DetailsTravel = props => {
 		} catch (error) {
 			alert("Sucedió algo inesperado");
 		}
-		useEffect(
-			() => {
-				if (params.travel_id) getDetails(params.travel_id);
-			},
-			[params.travel_id]
-		);
+		useEffect(() => {
+			if (params.travel_id) getDetails(params.travel_id);
+		}, [params.travel_id]);
 	};
 	return (
 		<div className="card" style={{ width: "18rem" }}>

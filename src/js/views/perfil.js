@@ -54,12 +54,9 @@ export const Perfil = () => {
 		}
 	};
 
-	useEffect(
-		() => {
-			if (store.token) getInfo(), getTravel();
-		},
-		[store.token]
-	);
+	useEffect(() => {
+		if (store.token) getInfo(), getTravel();
+	}, [store.token]);
 
 	return (
 		<>
