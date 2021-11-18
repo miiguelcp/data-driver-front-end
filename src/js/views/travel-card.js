@@ -6,7 +6,7 @@ import { AppContext } from "../store/appContext";
 
 export const TravelCard = props => {
 	return (
-		<div className="col-8">
+		<div className="col-8 m-3" style={{ width: "600px" }}>
 			<div className="card">
 				<div className="card-body">
 					<h5 className="card-title">Destino </h5>
@@ -14,9 +14,9 @@ export const TravelCard = props => {
 					<Link to={`/details/${props.travel.id}`} className="btn" id="btn-submit">
 						Detalles
 					</Link>
-					<div>
+					<div className="mt-2">
 						<a className="btn btn-sm btn-outline-danger border-0">
-							<i className="fa fa-file-pdf" />
+							<i className="fa fa-file-pdf icono-pdf" />
 						</a>
 					</div>
 				</div>

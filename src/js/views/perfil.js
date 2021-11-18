@@ -61,9 +61,10 @@ export const Perfil = () => {
 	return (
 		<>
 			{store.token ? (
-				<div className="row " style={{ margin: "95px 50px 160px 50px" }}>
-					<div className="col-4">
-						<div className="card">
+				<div className="row con-fa" style={{ margin: "70px 0px 160px 200px" }}>
+					<div className="col-3">
+						<h2>Perfil</h2>
+						<div className="card mt-3">
 							<img src={Usuario} className="card-img-top ml-3" alt="..." />
 							<div className="card-body">
 								<div className="container-father-perfil">
@@ -91,10 +92,12 @@ export const Perfil = () => {
 						</div>
 					</div>
 
-					<h2>Viajes</h2>
-					{travels.map(travel => {
-						return <TravelCard key={travel.id} travel={travel} />;
-					})}
+					<div className="col" style={{ width: "800px" }}>
+						<h2 style={{ marginLeft: "15px" }}>Viajes</h2>
+						{travels.map(travel => {
+							return <TravelCard key={travel.id} travel={travel} />;
+						})}
+					</div>
 				</div>
 			) : (
 				<Redirect to="/" />
