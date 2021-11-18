@@ -28,9 +28,12 @@ export const DetailsTravel = props => {
 		} catch (error) {
 			alert("Sucedió algo inesperado");
 		}
-		useEffect(() => {
-			if (params.travel_id) getDetails(params.travel_id);
-		}, [params.travel_id]);
+		useEffect(
+			() => {
+				if (params.travel_id) getDetails(params.travel_id);
+			},
+			[params.travel_id]
+		);
 	};
 	return (
 		<div className="card" style={{ width: "18rem" }}>
@@ -41,11 +44,11 @@ export const DetailsTravel = props => {
 			</div>
 			<ul className="list-group list-group-flush">
 				<li className="list-group-item">Lodging: {details.lodging}</li>
-				<li className="list-group-item">Amount</li>
-				<li className="list-group-item">Food</li>
-				<li className="list-group-item">Fuel</li>
-				<li className="list-group-item">Toll</li>
-				<li className="list-group-item">Unexpected</li>
+				<li className="list-group-item">Amount: {details.amount}</li>
+				<li className="list-group-item">Food: {details.food}</li>
+				<li className="list-group-item">Fuel: {details.fuel}</li>
+				<li className="list-group-item">Toll: {details.toll}</li>
+				<li className="list-group-item">Unexpected: {details.unexpected}</li>
 			</ul>
 			<div className="card-body">
 				<Link to="/" className="enlace" style={{ textDecoration: "none" }}>
