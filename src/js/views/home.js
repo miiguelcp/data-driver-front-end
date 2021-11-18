@@ -1,6 +1,8 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import geeks from "../../img/4geeks.png";
 import "../../styles/home.scss";
+import lb from "../../img/foto1.jpg";
 
 export const Home = () => (
 	<>
@@ -45,15 +47,14 @@ export const Home = () => (
 			</div>
 		</div>
 		<div className="container-fluid mt-3">
-			<div className="row p-2 section-text-image">
+			<div className="row p-2 section-text-image" style={{ marginLeft: "50px", marginRight: "50px" }}>
 				<div className="col" style={{ paddingTop: "7%" }}>
-					<h3>Encabezado</h3>
-					<p className="card-text">
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
+					<h3>Practicidad</h3>
+					<p className="mt-3">
+						Este tipo de aplicaciones permite al usuario efectuar un variado conjunto de tareas de acceso a
+						servicios y utilidades. Facilitando así las necesidades del conductor en todo momento y lugar.
 					</p>
-					<button type="button" className="btn mt-2" id="btn-submit">
+					<button type="button" className=" text-center btn mt-2" id="btn-submit">
 						Ver Más
 					</button>
 				</div>
@@ -61,28 +62,27 @@ export const Home = () => (
 					<img
 						className="card-img-top rounded"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "660px", height: "400px" }}
+						style={{ width: "650px", height: "400px" }}
 						alt="Card image cap"
 					/>
 				</div>
 			</div>
 		</div>
 		<div className="container-fluid mt-3">
-			<div className="row p-2 section-text-image">
+			<div className="row p-2 section-text-image" style={{ marginLeft: "50px", marginRight: "50px" }}>
 				<div className="col">
 					<img
 						className="card-img-top rounded"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "675px", height: "400px" }}
+						style={{ width: "650px", height: "400px" }}
 						alt="Card image cap"
 					/>
 				</div>
 				<div className="col" style={{ paddingTop: "7%" }}>
-					<h3>Encabezado</h3>
-					<p className="card-text">
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
+					<h3>Seguridad</h3>
+					<p className="card-text mt-3">
+						La seguridad es fundamental, esta aplicación resguarda y protege la información de cada usuario
+						buscando siempre mantener la confidencialidad.
 					</p>
 					<button type="button" className="btn mt-2" id="btn-submit">
 						Ver Más
@@ -90,16 +90,13 @@ export const Home = () => (
 				</div>
 			</div>
 		</div>
-		<div className="container-fluid mt-3" style={{ marginBottom: "75px" }}>
-			<div className="row p-2 section-text-image">
+
+		<div className="container-fluid mt-3">
+			<div className="row p-2 section-text-image" style={{ marginLeft: "50px", marginRight: "50px" }}>
 				<div className="col" style={{ paddingTop: "7%" }}>
-					<h3>Encabezado</h3>
-					<p className="card-text">
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-					</p>
-					<button type="button" className="btn mt-2" id="btn-submit">
+					<h3 className="mt-3">Practicidad</h3>
+					<p>Ligera, gratis y sin anuncios</p>
+					<button type="button" className=" text-center btn mt-2" id="btn-submit">
 						Ver Más
 					</button>
 				</div>
@@ -107,9 +104,97 @@ export const Home = () => (
 					<img
 						className="card-img-top rounded"
 						src="https://directivosygerentes.es/wp-content/uploads/2018/01/business-consulting-681x454.jpg"
-						style={{ width: "660px", height: "400px" }}
+						style={{ width: "650px", height: "400px" }}
 						alt="Card image cap"
 					/>
+				</div>
+			</div>
+		</div>
+
+		<div className="container-fluid">
+			<div className="row" style={{ marginLeft: "150px", marginTop: "70px", marginBottom: "70px" }}>
+				<div className="col-4" style={{ marginTop: "150px" }}>
+					<div className="card mb-3" style={{ maxWidth: "540px" }}>
+						<div className="row g-0">
+							<div className="col-md-4">
+								<img src={geeks} className="img-fluid rounded-start" alt="..." />
+							</div>
+							<div className="col-md-8">
+								<div className="card-body">
+									<h5 className="card-title">Desarrolladores</h5>
+									<p className="card-text">
+										This is a wider card with supporting text below as a natural lead-in to
+										additional content. This content is a little bit longer.
+									</p>
+									<p className="card-text">
+										<small className="text-muted">Last updated 3 mins ago</small>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div className="col-3">
+					<div className="card" style={{ width: "19rem" }}>
+						<img
+							src={lb}
+							className="card-img-top rounded"
+							alt="..."
+							style={{ width: "302px", height: "500px" }}
+						/>
+						<div className="card-body">
+							<h5 className="card-title">Leshlie Bideau</h5>
+							<p className="card-text">Student Full Stack</p>
+						</div>
+						<ul className="list-group list-group-flush">
+							<li className="list-group-item">
+								<i className="fab fa-github"></i>
+							</li>
+							<li className="list-group-item">
+								<i className="fab fa-linkedin-in"></i>
+							</li>
+							<li className="list-group-item">
+								<i className="fas fa-globe"></i>
+							</li>
+						</ul>
+						<div className="card-body">
+							<a href="#" className="card-link" style={{ color: "#000000", fontWeight: "500" }}>
+								Más información
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div className="col-3">
+					<div className="card" style={{ width: "19rem" }}>
+						<img
+							src={lb}
+							className="card-img-top rounded"
+							alt="..."
+							style={{ width: "302px", height: "500px" }}
+						/>
+						<div className="card-body">
+							<h5 className="card-title">Miguel Carreño</h5>
+							<p className="card-text">Student Full Stack</p>
+						</div>
+						<ul className="list-group list-group-flush">
+							<li className="list-group-item">
+								<i className="fab fa-github"></i>
+							</li>
+							<li className="list-group-item">
+								<i className="fab fa-linkedin-in"></i>
+							</li>
+							<li className="list-group-item">
+								<i className="fas fa-globe"></i>
+							</li>
+						</ul>
+						<div className="card-body">
+							<a href="#" className="card-link" style={{ color: "#000000", fontWeight: "500" }}>
+								Más información
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

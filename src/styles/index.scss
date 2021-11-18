@@ -136,3 +136,25 @@
     background-color:#73DE09;
     
 }
+.details-travel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 15px;
+}
+.icono-travel-information{
+    font-size: 80px;
+    color: #73DE09;
+    margin-left: 10px;
+}
+.con-fa{ 
+    display: flex;
+    justify-content: center;
+}
+
+.icono-pdf{
+  
+    font-size: 40px;
+}
