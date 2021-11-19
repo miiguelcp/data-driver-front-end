@@ -149,13 +149,13 @@ export const Home = () => (
 						</div>
 						<ul className="list-group list-group-flush">
 							<li className="list-group-item">
-								<i className="fab fa-github"></i>
+								<i className="fab fa-github" />
 							</li>
 							<li className="list-group-item">
-								<i className="fab fa-linkedin-in"></i>
+								<i className="fab fa-linkedin-in" />
 							</li>
 							<li className="list-group-item">
-								<i className="fas fa-globe"></i>
+								<i className="fas fa-globe" />
 							</li>
 						</ul>
 						<div className="card-body">
@@ -180,13 +180,13 @@ export const Home = () => (
 						</div>
 						<ul className="list-group list-group-flush">
 							<li className="list-group-item">
-								<i className="fab fa-github"></i>
+								<i className="fab fa-github" />
 							</li>
 							<li className="list-group-item">
-								<i className="fab fa-linkedin-in"></i>
+								<i className="fab fa-linkedin-in" />
 							</li>
 							<li className="list-group-item">
-								<i className="fas fa-globe"></i>
+								<i className="fas fa-globe" />
 							</li>
 						</ul>
 						<div className="card-body">

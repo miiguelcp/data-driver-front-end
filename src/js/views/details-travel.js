@@ -29,20 +29,17 @@ export const DetailsTravel = props => {
 		} catch (error) {
 			alert(error);
 		}
-		useEffect(
-			() => {
-				if (params.travel_id) getDetails(params.travel_id);
-			},
-			[params.travel_id]
-		);
 	};
 
-	useEffect(() => {
-		if (params.travel_id) {
-			getDetails(params.travel_id);
-			console.log(params);
-		}
-	}, [params.travel_id]);
+	useEffect(
+		() => {
+			if (params.travel_id) {
+				getDetails(params.travel_id);
+				console.log(params);
+			}
+		},
+		[params.travel_id]
+	);
 
 	return (
 		<>
